@@ -120,6 +120,9 @@ Cada cliente é classificado antes da geração das mensagens para enriquecer o 
 | cliente com saldo zerado | `balance == 0` |
 | cliente ativo | demais casos |
 
+> **PS: O que é Churn?**
+> Churn é quando um cliente abandona o relacionamento com uma empresa — no contexto bancário, significa fechar a conta ou migrar para outro banco. É uma métrica crítica para instituições financeiras, pois adquirir um novo cliente custa muito mais do que reter um existente. No dataset, `churn = 1` indica que o cliente já deixou o banco em algum período. São exatamente esses clientes que priorizamos para gerar mensagens de retenção, simulando uma ação de CRM.
+
 **Parte C — IA Generativa**
 
 Para cada cliente com `churn = 1`, uma mensagem personalizada de retenção é gerada via IA, com base no perfil financeiro do cliente.
@@ -186,6 +189,25 @@ OPENROUTER_API_KEY=sua-chave-aqui
 ```bash
 jupyter-lab
 ```
+
+---
+
+## 📬 Amostra de Mensagens Geradas
+
+Exemplos de mensagens personalizadas geradas pela IA para clientes em risco de churn:
+
+| Nome | País | Saldo | Perfil | Mensagem |
+|------|------|-------|--------|----------|
+| Patrícia Rocha Alves | Germany | 131593.85 | cliente em risco de churn | Olá Patrícia, estamos aqui para ajudar e queremos garantir que você esteja completamente satisfeita com nossos serviços, por isso gostaríamos de oferecer uma revisão personalizada das suas contas e produtos para melhor atender às suas necessidades em Berlim. Você está disponível para uma breve conversa sobre como podemos melhorar nosso relacionamento e serviços para você?  |
+| Silvana Costa Ferreira | France | 123711.73 | cliente em risco de churn | Silvana, sabemos que você tem um relacionamento importante com o ABC Bank e queremos garantir que você tenha a melhor experiência. Estamos aqui para ajudar com qualquer necessidade, seja no Brasil ou em Paris! |
+| André Costa Araújo | Germany | 132405.52 | cliente em risco de churn | André, valorizamos muito sua confiança no ABC Bank. Que tal explorarmos juntos oportunidades para potencializar seu relacionamento conosco?  |
+| Mariana Costa Santos | France | 238387.56 | cliente em risco de churn | Mariana, valorizamos muito sua confiança no ABC Bank e queremos garantir que você tenha a melhor experiência. Estamos aqui para ajudar com qualquer necessidade ou dúvida! |
+| Paulo Roberto Mendes | Germany | 120100.41 | cliente em risco de churn | Paulo, valorizamos muito sua confiança no ABC Bank. Que tal aproveitar seu saldo e limite disponível para um investimento ou produto exclusivo? Estamos aqui para ajudar!
+| Mariana Costa Santos | Germany | 103700.69 | cliente em risco de churn | Mariana, sabemos que você tem um saldo significativo no ABC Bank e queremos garantir que você tenha a melhor experiência. Estamos aqui para ajudar com qualquer necessidade ou dúvida!
+| Marcos Pereira Rocha | France | 0.00 | cliente em risco de churn | Marcos, valorizamos muito sua confiança no ABC Bank. Estamos aqui para ajudar a encontrar a melhor solução para você!  |
+| Vanessa Gomes Carvalho | Spain | 0.00 | cliente em risco de churn | Vanessa, sabemos que você é uma cliente importante para nós e adoraríamos continuar te ajudando com suas necessidades financeiras. Estamos aqui para oferecer soluções que se adaptem ao seu momento atual. |
+| Paulo Roberto Mendes | Germany | 109339.17 | cliente em risco de churn | Paulo, valorizamos muito sua confiança no ABC Bank. Que tal conversarmos sobre como podemos melhorar sua experiência conosco?  |
+| João Pedro Souza | Germany | 127655.22 | cliente em risco de churn | João Pedro, valorizamos muito sua confiança no ABC Bank. Que tal explorarmos juntos benefícios exclusivos para você?  |
 
 ---
 
