@@ -1,0 +1,4 @@
+.DS_Store
+.env
+*.py[oc]
+.ipynb_checkpoints/

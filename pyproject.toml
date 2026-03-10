@@ -1,0 +1,25 @@
+[project]
+name = "dio-etl"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jayme Tosi Neto",email = "jaymetosineto@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas (>=3.0.1,<4.0.0)",
+    "jupyterlab (>=4.5.5,<5.0.0)",
+    "groq (>=1.1.0,<2.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "mistralai (>=1.12.4,<2.0.0)",
+    "openai (>=2.26.0,<3.0.0)",
+    "numpy (>=2.4.3,<3.0.0)",
+    "ipywidgets (>=8.1.8,<9.0.0)",
+    "google-genai (>=1.66.0,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
